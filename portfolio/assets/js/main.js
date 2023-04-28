@@ -75,7 +75,27 @@ tabs.forEach(tab =>{
 })
 /*==================== SERVICES MODAL ====================*/
 
+const modalViews =  document.querySelectorAll('.services__modal'),
+    modalBtns = document.querySelectorAll('.services__button'),
+    modalCloses = document.querySelectorAll('.services__modal-close')
 
+let modal = function(modalClick){
+    modalViews[modalClick].classList.add('active-modal')
+}
+
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
+        modal(i)
+    }) 
+})
+
+modalCloses.forEach((modalClose) => {
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) =>{
+            modalView.classList.remove('active-modal')
+        })
+    })
+})
 /*==================== PORTFOLIO SWIPER  ====================*/
 
 
@@ -92,3 +112,25 @@ tabs.forEach(tab =>{
 
 
 /*==================== DARK LIGHT THEME ====================*/ 
+const themeBtn = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
+
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () => themeBtn.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+
+if(selectedTheme){
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+    themeBtn.classList[selectedIcon === 'uil-sun' ? 'add' : 'remove'](iconTheme)
+}
+
+themeBtn.addEventListener('click', () =>{
+    document.body.classList.toggle(darkTheme)
+    themeBtn.classList.toggle(iconTheme)
+
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})

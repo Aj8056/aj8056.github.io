@@ -37,13 +37,13 @@
                                 <i class="uil uil-airplay nav__icon"></i> Services
                             </a>
                         </li>
-                        <li class="nav__item">
+                        <!-- <li class="nav__item">
                             <a href="#portfolio" class="nav__link">
                                 <i class="uil uil-airplay nav__icon"></i> Portfolio
                             </a>
-                        </li>
+                        </li> -->
                         <li class="nav__item">
-                            <a href="#contact" class="nav__link">
+                            <a href="https://wa.me/12269758056" class="nav__link">
                                 <i class="uil uil-message nav__icon"></i> Contact me
                             </a>
                         </li>
@@ -52,6 +52,7 @@
                     <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
                 <div class="nav__btns">
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
                     <div class="nav__toggle" id="nav-toggle">
                         <i class="uil uil-apps"></i>
                     </div>
@@ -508,20 +509,111 @@
          </section>
          <!-- service -->
          <section class="services section" id="services">
-             <h2 class="section_title">Services</h2>
+             <h2 class="section__title">Services</h2>
              <span class="section__subtitle">What I offer</span>
 
              <div class="services__container container grid">
+                <!-- 1 -->
                 <div class="services__content">
                     <div>
-                        <i class="uil uil-web-grid-alt services__icon"></i>
-                        <h3 class="services__title">Ui/Ux <br> Designer</h3>
+                        <i class="uil uil-laptop-cloud services__icon"></i>
+                        <h3 class="services__title">Web Application<br> Developer</h3>
                     </div>
 
                     <span class="button button--flex button--small button--link services__button">
                         View More 
                         <i class="uil uil-arrow-right button__icon"></i>
                     </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Web Application<br> Developer</h4>
+                            <i class="uil uil-times services__modal-close"></i>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>I develop single page web application.</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Web app - frontend using ANGULAR 10+</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Backend API - Fastapi (Python)</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>DB - SQL / No-Sql.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="services__content">
+                    <div>
+                        <i class="uil uil-arrow services__icon"></i>
+                        <h3 class="services__title">Building Static Website</h3>
+                    </div>
+
+                    <span class="button button--flex button--small button--link services__button">
+                        View More 
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">Web <br> Developer</h4>
+                            <i class="uil uil-times services__modal-close"></i>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Building responsive static websites</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Using HTML, CSS and JavaScript</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="services__content">
+                    <div>
+                        <i class="uil uil-arrow services__icon"></i>
+                        <h3 class="services__title">API Developer</h3>
+                    </div>
+
+                    <span class="button button--flex button--small button--link services__button">
+                        View More 
+                        <i class="uil uil-arrow-right button__icon"></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <h4 class="services__modal-title">API <br> Developer</h4>
+                            <i class="uil uil-times services__modal-close"></i>
+
+                            <ul class="services__modal-services grid">
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Building api for Cross-platform application</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Using FastApi( Python ),SpringBoot( Java )</p>
+                                </li>
+                                <li class="services__modal-service">
+                                    <i class="uil uil-check-circle services__modal-icon"></i>
+                                    <p>Designing and building API from Scratch</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
              </div>
          </section>
@@ -542,10 +634,39 @@
 
          </section> -->
      </main>
+     <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Ajay Vigneshwar GB</h1>
+                    <span class="footer__subtitle">Software Developer</span>
+                </div>
 
-     <!-- <footer class="footer">
-      
+                <ul class="footer__links">
+                    <li>
+                        <a href="#services" class="footer__link">Services</a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/12269758056" class="footer__link">Contact me</a>
+                    </li>
+                </ul>
+
+                <div class="footer__socials">
+                    <a href="https://www.instagram.com/learnwithajay" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/ajaygb7" target="_blank" class="footer__social">
+                        <i class="uil uil-twitter-alt"></i>
+                    </a>
+                    <a href="https://wa.me/12269758056" target="_blank" class="footer__social">
+                        <i class="uil uil-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
      </footer>
+     <!-- 
      
      
      <script src=""></script> -->
