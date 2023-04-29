@@ -862,7 +862,7 @@ a, a:hover, a:focus, a:active {
 }
 
 /* For medium devices */
-@media screen and (max-width: 568px){
+@media screen and (max-width: 650px){
   .home__content{
     grid-template-columns: max-content 1fr 1fr;
   }
